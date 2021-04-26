@@ -1,0 +1,34 @@
+<div  class="container">
+ 
+    <div class="row">
+        <div class="col">
+            <div *ngIf="even"class="row mt-5">
+                <div class="col-lg-6">
+                    <div class="favfood" [ngStyle]="{ 'background-image': 'url('+favoriteRecipies.img+')' }" alt=" "></div>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="text-center">{{favoriteRecipies.title}}</h4><br>
+                    <p>{{favoriteRecipies.ingredients}}</p><br>
+                    <p>{{favoriteRecipies.directions}}</p>
+                </div>
+                <app-remove-btn klass="btn btn-danger mt-5" btnRText="UnFavorite"></app-remove-btn>
+            </div>
+        
+            <div *ngIf="!even"  class="row mt-5">
+                <div class="col-lg-6">
+                    <h4 class="text-center">{{favoriteRecipies.title}}</h4><br>
+                    <p>{{favoriteRecipies.ingredients}}</p><br>
+                    <p>{{favoriteRecipies.directions}}</p>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Change the ngStyle to src because it doesn't work with the apis imgs -->
+                    <div class="favfood" [ngStyle]="{ 'background-image': 'url('+favoriteRecipies.img+')' }" alt=" "></div>
+                </div>
+                <app-remove-btn klass="btn btn-danger mt-5" btnRText="UnFavorite"></app-remove-btn>
+            </div>
+        </div>
+    </div>
+    <hr class="custom-line">
+    
+    
+</div>

@@ -1,0 +1,10 @@
+<div class="conatiner">
+
+    <div class="row">
+        <div class="col">
+            <div *ngFor="let r of rngRecipes, let even=even">
+                <app-random-recipes [even]="even" [rngRecipes]="r"></app-random-recipes>
+            </div>
+        </div>
+        </div>
+</div>
